@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>The Number Guessing Game</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            <!-- //Start hiding java
+            //
+                var randomNo = 0;
+                var gameOver = false;
+                var keepPlaying = false;
+                var guess = '';
+                var msg = "I am thinking of a number from 1 - 10.  Try to guess it: ";
+                var reply = "";
+                
+                function getNum(limit){
+                    myNum = 1 + Math.random() * limit;
+                    return Math.floor(myNum);
+                }
+
+                // This loop allows the player to play as many games as desired
+                while (gameOver == false){
+                    randomNo = getNum(9);
+                    keepPlaying = true;
+                    while (keepPlaying == true){
+                        guess = window.prompt(msg);
+                        if (guess == randomNo){
+                            window.alert("Correct! You guessed it");
+                            reply = window.prompt("Would you like to play again? (y/n)");
+                            if(reply == "y"){
+                                keepPlaying = true;
+                                gameOver = false;
+                            }else{
+                                keepPlaying = false;
+                                gameOver = true;
+                            }
+                        }else{
+                            if(guess > randomNo){
+                                window.alert("Too High");
+                            }else{
+                                window.alert("Too Low");
+                            }
+                        }
+                    }
+                }
+                window.alert("Game over.  Thanks for Playing");  
+            // End hiding -->
+            
+        </script>
+    </body>
+</html>
